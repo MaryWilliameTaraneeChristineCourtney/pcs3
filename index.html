@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Happy 30th Birth Day, Dear Chum!</title>
+		<link href="CSS/mystyle.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css" rel="stylesheet" type="text/css" />
+		<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/preloadstyle.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script>
+			$(function(e) {
+			  $('#reinburr').delay('13000').fadeOut('1000', function() {
+				$(this).remove();
+				$('#wrapthis').fadeIn('1000');
+			  });
+			});
+		</script>
+		<script>
+			// loads the audio player
+			audioPlayer();
+		</script>
+		<script>
+			//This plays a file, and call a callback once it completed (if a callback is set)
+
+			function play(audio, callback) {
+				audio.play();
+				if (callback) {
+				//When the audio object completes its playback, call the callback
+				//provided      
+					audio.addEventListener('ended', callback);
+				}
+				audio.volume = 0.1;
+				
+			}
+
+			//Changed the name to better reflect the functionality
+			function play_sound_queue(sounds) {
+				var index = 0;
+				function recursive_play() {
+				//If the index is the last of the table, play the sound
+				//without running a callback after       
+					if (index + 1 === sounds.length) {
+						play(sounds[index], null);
+					} else {
+					  //Else, play the sound, and when the playing is complete
+					  //increment index by one and play the sound in the 
+					  //indexth position of the array
+							play(sounds[index], function() {
+								index++;
+								recursive_play();
+							});
+						}
+					}
+
+			  //Call the recursive_play for the first time
+				recursive_play();
+			}
+
+			function play_all() {
+				play_sound_queue([new Audio("Audio/RollerCoaster.mp3"), new Audio("Audio/CannedHeat.mp3"), new Audio("Audio/ElectricYouth.mp3")]);
+			}
+			
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage();
+			});
+		</script>
+		<!--<script>
+			$('.mouseoverme1').hover(
+				function(){
+					$('.hiddendiv').css('display', 'block');
+					$('.hiddendiv').html(
+						"<img src='https://secure.mooseintl.org/FRUAdmin/images/gears_animated.gif' />"
+						);
+								   },
+				function(){
+					$('.hiddendiv').css('display', 'none');
+						   }
+			);
+		</script>-->
+		<!--<script type="text/javascript" src="JavaScript/cstars.js"></script>-->
+		
+	</head>
+<body>
+<audio autoplay>
+	<source src="Audio/000.mp3" type="audio/mpeg" />
+</audio>
+<div id="reinburr">
+	
+	<img class="rb" id="rb1" src="Images/Rainbow/1.png" />
+	<img class="rb" id="rb2" src="Images/Rainbow/2.png" />
+	<img class="rb" id="rb3" src="Images/Rainbow/3.png" />
+	<img class="rb" id="rb4" src="Images/Rainbow/4.png" />
+	<img class="rb" id="rb5" src="Images/Rainbow/5.png" />
+	<img class="rb" id="rb6" src="Images/Rainbow/6.png" />
+	<img class="rb" id="rb7" src="Images/Rainbow/7.png" />
+	<img class="rb" id="rb8" src="Images/Rainbow/8.png" />
+</div>
+	
+<div id="wrapthis" style="display:none;">
+<div id="fullpage">
+	<div class="section">
+		<img id="discoball" src="Images/Disco-Ball.gif" onclick="play_all();" />
+		<video autoplay loop muted class="titlevid">
+			<source src="Videos/Title.mp4" type="video/mp4">
+		</video>
+		
+		<!--<img class="h30bd" src="Images/h30bdfinal.png" />
+		<img class="cs188" src="Images/cs188.png" />
+		<img class="picture0" src="Images/Profile Picture.png"/>-->
+	</div>
+	<div class="section">
+		<div class="slide headpage"><img src="Images/115.png" /></div>
+		<div class="slide fillel">
+        <div class="tile1"></div>
+			<h2 class="rotateleft">ABlankNam3dKid</h2>
+			<h3 class="rotateright2">Keep up what you are doing cs, you'll always get more insanity through your viewers than you think!</h3>
+			<img class="peepee01" src="Images/Individuals/001.png" />
+			<img class="pin01" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h2 class="rotateright2">Irukandji Ichyouiyxl</h2>
+			<h3 class="rotateleft">Happy Birthday dude, wish you have a beautiful time.</h3>
+			<img class="peepee02" src="Images/Individuals/002.png" />
+			<img class="pin02" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h3 class="rotateright">Happy birthday!! Keep up the good work!</h3>
+            <h2 class="rotateleft2">RadCastle</h2><img alt="I said something." class="peepee03" src="Images/Individuals/003.png" onmouseover="document.getElementById('play003').play()" />
+			<audio id="play003" preload="auto">
+				<source src="Audio/003.mp3" />
+			</audio>
+			<img class="pin03" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h3 class="rotateleft2">Man, how old are you now? THIRTY?! What in the goddamn- You aren't even a day over 18! And I'm serious! Ahh hell, Happo Birpdep. In 5 years, you get to run the Un-united States of Hysteria! You have my vote!! <br /><br />-Love, and a lot of it, Kimmie SASumori <br /><br />[Stay radical, my dude.] </h3>
+			
+			<h2 class="rotateright">Kimmie Sasumori</h2>
+			
+			<img alt="I said something." class="peepee04" src="Images/Individuals/004.png" onmouseover="document.getElementById('play004').play()" />
+			<audio id="play004" preload="auto">
+				<source src="Audio/004.mp3" />
+			</audio>
+			<img class="pin04" src="Images/Pins/3Sub.png" />
+			
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h2 class="rotateleft">Eddiemode</h2>
+			<h3 class="rotateright2">I wish you to be a happy person.</h3>
+			<img class="peepee05" src="Images/Individuals/005.png" />
+			<img class="pin05" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile6"></div>
+			<h2 class="rotateright2">DigBick</h2>
+			<h3 class="rotateleft">Motorola TV! Motorola TV! Mooootooorooola TV! <br /><br />CS happy birthday, you are my 3rd favorite person in the world. Next to both of my parents. That's showing how much I appreciate you <img src="Images/slightly-smiling-face_1f642.png" style="width:25px;"/></h3>
+			<img class="peepee06" src="Images/Individuals/006.png" />
+			<img class="pin06" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile7"></div>
+			<h3 class="rotateright">It's been atleast 1.5 years at this point in time in which you are probably being shown this message, and if I haven't gotten myself into too much trouble by this point and I'm still there in the community, I gotta thank you for everything we all have done, especially all the regulars in the chat rn. </h3>
+            <h2 class="rotateleft2">Pakoo</h2>
+			<img alt="I said something." class="peepee07" src="Images/Individuals/007.png" onmouseover="document.getElementById('play007').play()" />
+			<audio id="play007" preload="auto">
+				<source src="Audio/007b.mp3" />
+			</audio>
+			<img class="pin07" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile8"></div>
+			<h3 class="rotateleft2">Happy birthday CS! Thank you for the entertainment and <img src="Images/heavy-black-heart_2764.png" style="width:25px;"/>! </h3>
+            <h2 class="rotateright">NakedOstrich</h2>
+			<img class="peepee08" src="Images/Individuals/008.png" />
+			<img class="pin08" src="Images/Pins/3Sub.png" />
+		</div>
+		<div class="slide fillel">
+        <div class="tile9"></div>
+			<h2 class="rotateleft">AWK8923</h2>
+			<h3 class="rotateright2">Happy 30th CS. I would assume that turning 30 feels weird so I have a message to help with that. You've made good use of all that time. You've built an amazing community and brought joy to hundreds of thousands. I owe the community you've built many of my closest friends. Thanks for the 6 years of entertainment.</h3>
+			<img alt="I said something." class="peepee09" src="Images/Individuals/009.png" onmouseover="document.getElementById('play009').play()" />
+			<audio id="play009" preload="auto">
+				<source src="Audio/009.mp3" />
+			</audio>
+			<img class="pin09" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile10"></div>
+			<h2 class="rotateright2">nespc</h2>
+			<h3 class="rotateleft">Happy birthday mate!! Wishing you a great Birthday and many more, From nespc.</h3>
+			<img class="peepee10" src="Images/Individuals/010.png" />
+			<img class="pin10" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile1"></div>
+			<h3 class="rotateright">Oi m8. Take care m8. Happy birthday m8. Did I say m8 too many times?</h3>
+            <h2 class="rotateleft2">FabeGabe</h2>
+			
+			<img alt="I said something." class="peepee11" src="Images/Individuals/011.png" onmouseover="document.getElementById('play011').play()" />
+			<audio id="play011" preload="auto">
+				<source src="Audio/011.mp3" />
+			</audio>
+			<img class="pin11" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h3 class="rotateleft2">You were the first person I ever watched on mixer. Even though I have to destroy my sleep schedule to watch you, it is completely worth it cause you never cease to make me smile. You have developed an amazing supportive community that I am glad to be a part of and if it weren't for you I wouldn't have met all these amazing people. Here's to another year with cs188, let's hope there will be many more to come.</h3>
+			
+			<h2 class="rotateright">Dimick</h2><img alt="I said something." class="peepee12" src="Images/Individuals/012.png" onmouseover="document.getElementById('play012').play()" />
+			<audio id="play012" preload="auto">
+				<source src="Audio/012.mp3" />
+			</audio>
+			<img class="pin12" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h2 class="rotateleft">Clasiku</h2>
+			<h3 class="rotateright2">Hey, man. I know I don't attend the streams as I used to, but I continue to wish you luck. You have been an inspiration to all of us and a good influence in the community. As a YTPer, music maker and a discord user I wish you happy birthday and I hope you celebrate it with your family, yourself and even this entire MiCSer [Mixer] community. Continue success and thank you for everything! You ARE amazing! <br/><br/>PS: I'm sorry for any trouble I have caused over the past year.</h3>
+			<img alt="I said something." class="peepee13" src="Images/Individuals/013.png" onmouseover="document.getElementById('play013').play()" />
+			<audio id="play013" preload="auto">
+				<source src="Audio/013.mp3" />
+			</audio>
+			<img class="pin13" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h2 class="rotateright2">WithEyesAflame</h2>
+			<h3 class="rotateleft">You're a huge inspiration to me, CS, and I can't thank you enough. I hope you have many, many more great years ahead of you. Who knows, maybe you'll the first person to reach 188 years of age, eh? Happy birthday, CS.</h3>
+			<img alt="I said something." class="peepee14" src="Images/Individuals/014.png" onmouseover="document.getElementById('play014').play()" />
+			<audio id="play014" preload="auto">
+				<source src="Audio/014.mp3" />
+			</audio>
+			<img class="pin14" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h3 class="rotateright">Hey CS, thank you so much for everything that you do. In your YTPs and your livestreams you never fail to put a big dumb smile <br />on my face. I hope you have a great birthday, you deserve it!</h3>
+            <h2 class="rotateleft2">crashmatilda</h2><img alt="I said something." class="peepee15" src="Images/Individuals/015.png" onmouseover="document.getElementById('play015').play()" />
+			<audio id="play015" preload="auto">
+				<source src="Audio/015.mp3" />
+			</audio>
+			<img class="pin15" src="Images/Pins/3Sub.png" />
+        </div>
+    </div>
+	<div class="section">
+		<div class="slide headpage"><img src="Images/215.png" /></div>
+		<div class="slide fillel">
+        <div class="tile1"></div>
+			<h2 class="rotateleft">db05</h2>
+			<h3 class="rotateright2">Happy CS day! hope it's a good one!</h3>
+			<img alt="I said something." class="peepee01" src="Images/Individuals/016.png" onmouseover="document.getElementById('play016').play()" />
+			<audio id="play016" preload="auto">
+				<source src="Audio/016.mp3" />
+			</audio>
+			<img class="pin01" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h2 class="rotateright2">PizzaSqueeze</h2>
+			<h3 class="rotateleft">Hi CS188 I hope you have a amazing birthday!!!<br /><br />[And also,] I hope you have the best birthday ever!</h3>
+			<img class="peepee02" src="Images/Individuals/017.png" />
+			<img class="pin02" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h3 class="rotateright">Another year of CS-brand insanity has come and gone, here's to another one with even more fun! Hope the YTP inspiration comes back soon too. <img src="Images/slightly-smiling-face_1f642.png" style="width:25px;"/></h3>
+            <h2 class="rotateleft2">1sam234</h2>
+			<img class="peepee03" src="Images/Individuals/018.png" />
+			<img class="pin03" src="Images/Pins/5LS.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h3 class="rotateleft2">Hey CS. You've heard me once before and I'm sure this wont be the last time you hear me. All I want to say to you is, have a happy fucking birthday. And when you  stream, I hope that nothing goes wrong and that the joj is done right. Anyways, have a amazing birthday CS. <br /><br />Im ThatKid, signing out.</h3>
+			<h2 class="rotateright">ThatOneKid_Sergio</h2>
+			<img alt="I said something." class="peepee04" src="Images/Individuals/019.png" onmouseover="document.getElementById('play019').play()" />
+			<audio id="play019" preload="auto">
+				<source src="Audio/019.mp3" />
+			</audio>
+			<img class="pin04" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h2 class="rotateleft">PreownedOrchid0</h2>
+			<h3 class="rotateright2">Hapy birthday CS188. I hope your day goes well and i'm always happy to watch you live stream/make ytps. You make really good ones.</h3>
+			<img class="peepee05" src="Images/Individuals/020.png" />
+			<img class="pin05" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile6"></div>
+			<h2 class="rotateright2">InspectorFlaretale52</h2>
+			<h3 class="rotateleft">Let's cheer for another of csinsanity [even though we are past that] Happy B-day, cs!</h3>
+			<img class="peepee06" src="Images/Individuals/021.png" />
+			<img class="pin06" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile7"></div>
+			<h3 class="rotateright">Happy day of birth CS! I hope that your day is going well. This is truly an amazing community that you have... um... birthed? Anyway, thank you so much for all the laughs over the years, and here's to another awesome year of crAaAaAaAazy livestreams! <br /><br />[Let's just hope the chat isn't too crAaAaAazy for both of our sake though].</h3>
+            <h2 class="rotateleft2">Mattfrie1</h2>
+			<img class="peepee07" src="Images/Individuals/022.png" />
+			<img class="pin07" src="Images/Pins/5LS.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile8"></div>
+			<h3 class="rotateleft2">Keep up the good JoJ of streaming/making YTPs!</h3>
+            <h2 class="rotateright">987computer</h2>
+			<img class="peepee08" src="Images/Individuals/023.png" />
+			<img class="pin08" src="Images/Pins/1Reg.png" />
+		</div>
+		<div class="slide fillel">
+        <div class="tile9"></div>
+			<h2 class="rotateleft">GL17CH</h2>
+			<h3 class="rotateright2">Happy happy birthday man! Keep up that loving community and it loves you back!</h3>
+			<img class="peepee09" src="Images/Individuals/024.png" />
+			<img class="pin09" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile10"></div>
+			<h2 class="rotateright2">Cattck</h2>
+			<h3 class="rotateleft">Happy Birthday Good Sir!</h3>
+			<img class="peepee10" src="Images/Individuals/025.png" />
+			<img class="pin10" src="Images/Pins/2Pro.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile1"></div>
+			<h3 class="rotateright">Happy Birthday to the most hilarious YouTube creator that I know!!!</h3>
+            <h2 class="rotateleft2">NKWHOA</h2>
+			<img alt="I said something." class="peepee11" src="Images/Individuals/026.png" onmouseover="document.getElementById('play026').play()" />
+			<audio id="play026" preload="auto">
+				<source src="Audio/026.mp3" />
+			</audio>
+			<img class="pin11" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h3 class="rotateleft2">Happy Birthday! Have a great one!</h3>
+			<h2 class="rotateright">norespnse</h2>
+			<img class="peepee12" src="Images/Individuals/027.png" />
+			<img class="pin12" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h2 class="rotateleft">TheZapster</h2>
+			<h3 class="rotateright2">Hey, Mr. 188! Happy Birthday! It's so cool that you turned another year old. That's amazing! I just want to say something to you, and that is to celebrate your day with Domino's! HAAAAAAAAAAPY BIRTHDAY!</h3>
+			<img class="peepee13" src="Images/Individuals/028.png" />
+			<img class="pin13" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h2 class="rotateright2">ForgottenPlanet/Jenifer</h2>
+			<h3 class="rotateleft">Hey, try and make this year a year worth remembering. Thanks for bringing so much to our lives, CS.</h3>
+			<img class="peepee14" src="Images/Individuals/029.png" />
+			<img class="pin14" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h3 class="rotateright">Happy Birthday CS hope you had a blessed and wonderful one, wishing you the best and many more... <img src="Images/party-popper_1f389.png" style="width:25px;"/></h3>
+            <h2 class="rotateleft2">WiCk3Dz </h2>
+			<img class="peepee15" src="Images/Individuals/030.png" onmouseover="document.getElementById('playalpha').play()" />
+			<img class="pin15" src="Images/Pins/3Sub.png" />
+			<video id="playalpha" preload="auto" class="achievements" style="right: 2.125%;" >
+				<source src="Images/Achievements/Alpha.webm" type="video/webm" />
+			</video>
+        </div>
+    </div>
+	<div class="section">
+		<div class="slide headpage"><img src="Images/315.png" /></div>
+		<div class="slide fillel">
+        <div class="tile1"></div>
+			<h2 class="rotateleft">TMF</h2>
+			<h3 class="rotateright2">Happy birthday, CS! Your streams and YTPs give me much joy every time they appear on YouTube and Mixer. Keep up the hard work and hopefully the mainstream YouTube audience will start taking you seriously!<br /><br />PS Holy Trinity of YTP = CS188, Dathings1 and KroboProductions IMO <img src="Images/grinning-face_1f600.png" style="width:25px;" /></h3>
+			<img class="peepee01" src="Images/Individuals/031.png" />
+			<img class="pin01" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h2 class="rotateright2">FrankieJoe2/Miltank</h2>
+			<h3 class="rotateleft">I hope you have a craAaAaAaAzy birthday! In a good way, I mean.</h3>
+			<img alt="I said something." class="peepee02" src="Images/Individuals/032.png" onmouseover="document.getElementById('play032').play()" />
+			<audio id="play032" preload="auto">
+				<source src="Audio/032.mp3" />
+			</audio>
+			<img class="pin02" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h3 class="rotateright">Happy birthday! Wishing you the best in your years to come. <img src="Images/slightly-smiling-face_1f642.png" style="width:25px;" /></h3>
+            <h2 class="rotateleft2">Lychi</h2>
+			<img class="peepee03" src="Images/Individuals/033.png" />
+			<img class="pin03" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h3 class="rotateleft2">It's hard to believe I discovered your YTPs back in around 2010 or so, with that Justin Bieber YTP being the very first YTP of yours I watched, and also the first "modern" [a.k.a non-spadinner] YTP I ever watched, which eventually led to the start of my YTP career, in late 2010 or some time in 2011, which were basically spadinner, but not really, and the first few ended up getting lost when my original YouTube account mysteriously disappeared.<br /><br />I originally saw you as someone who didn't want to reveal your face, as I still don't want to intentionally reveal my face online.<br /><br />I'll cut to the end of my story here. I've been enjoying your YTPs for many years even though you decided to stop doing music YTPs. Happy birthday, CS.</h3>
+			<h2 class="rotateright">Manjimutt/kbhasi</h2>
+			<img class="peepee04" src="Images/Individuals/034.png" />
+			
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h2 class="rotateleft">KawaiiCoffee</h2>
+			<h3 class="rotateright2">I hope an extra year means an extra year of fun. Best of luck in your streaming career. Happy bday, CS!</h3>
+			<img alt="I said something." class="peepee05" src="Images/Individuals/035.png" onmouseover="document.getElementById('play035').play()" />
+			<audio id="play035" preload="auto">
+				<source src="Audio/035.mp3" />
+			</audio>
+			<img class="pin05" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile6"></div>
+			<h2 class="rotateright2">boisosman</h2>
+			<h3 class="rotateleft">Dear cs, After these 1 and a half years of being on Mixer, I really want to say, thanks for everything so far. The streams are very funny, and I can't find such a great streamer as you on any platform. You are one of the nicest people I met in my life. You inspire me and many others to stream, even though I haven't been doing that constantly. Your Discord is one of the best Discord servers in the world. Everytime I get into your streams, it lets all of my stress aside, and let's me be happy. I want to say thank you, even though I can be annoying at times and sometimes I do stuff that isn't very appropiate and rude, I want to say i'm sorry for that. I hope you have a Happy  Birthday you can remember. You can use my donations towards something. You really deserve all the donations I send to you. Thank you cs for all the fun times in YTPS and streams.<br /><br />Sincerely, <br /><br />boisosman.</h3>
+			<img alt="I said something." class="peepee06" src="Images/Individuals/036.png" onmouseover="document.getElementById('play036').play()" />
+			<audio id="play036" preload="auto">
+				<source src="Audio/036.mp3" />
+			</audio>
+			<img class="pin06" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile7"></div>
+			<h3 class="rotateright">Find health and joy and satisfaction in all you create!</h3>
+            <h2 class="rotateleft2">DaThings1</h2>
+			<img class="peepee07" src="Images/Individuals/037.png" />
+			<img class="pin07" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile8"></div>
+			<h3 class="rotateleft2">Happy Birthday CS! You don't even know how many times you've made me happy when I've felt down. I clicked the bell icon, and grin everytime it rings. Your streams bring me joy for hours on end. You are an amazing streamer, an amazing YouTuber, and an amazing friend.</h3>
+            <h2 class="rotateright">DigiDuncan</h2>
+			<img alt="I said something." class="peepee08" src="Images/Individuals/038.png" onmouseover="document.getElementById('play038').play()" />
+			<audio id="play038" preload="auto">
+				<source src="Audio/038.mp3" />
+			</audio>
+			<img class="pin08" src="Images/Pins/5LS.png" />
+		</div>
+		<div class="slide fillel">
+        <div class="tile9"></div>
+			<h2 class="rotateleft">ApexRogue</h2>
+			<h3 class="rotateright2">CS, I want to say Happy Birthday to you not only as a fellow streamer and someone who considers you a friend, but someone who looks up to you. When I left Mixer some time ago it was due to some of the things I saw going on and how people have changed from what Beam was but you haven't lost site of what it means to be a streamer who connects with and loves his viewers, so, as I've said, you're one of those positive influences that kept me from quitting. My birthday wish for you is to keep having reasons to smile as big as the smiles you give to those viewers. Love ya dude. You're doing something amazing, keep up the good work.</h3>
+			<img alt="I said something." class="peepee09" src="Images/Individuals/039.png" onmouseover="document.getElementById('play039').play()" />
+			<audio id="play039" preload="auto">
+				<source src="Audio/039.mp3" />
+			</audio>
+			<img class="pin09" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile10"></div>
+			<h2 class="rotateright2">ByronB90</h2>
+			<h3 class="rotateleft">Have a pooptastic barfday!!</h3>
+			<img class="peepee10" src="Images/Individuals/040.png" />
+			<img class="pin10" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile1"></div>
+			<h3 class="rotateright">Happy birthday cs188! [with your Chum]</h3>
+            <h2 class="rotateleft2">Triet's Lab</h2>
+			<img class="peepee11" src="Images/Individuals/041.png" />
+			<img class="pin11" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h3 class="rotateleft2">Maybe I'd donate less often if you made it less fun to see your reaction <img src="Images/face-with-stuck-out-tongue_1f61b.png" style="width:25px;" /><br />And if you stopped deserving it <img src="Images/face-with-stuck-out-tongue_1f61b.png" style="width:25px;" /><br />Also, I'm still pretty sure CS188 is a brony.<br /><br />Happy birthday, ya frogskin' munchkin!</h3>
+			<h2 class="rotateright">WillEweGoatABed</h2>
+			<img class="peepee12" src="Images/Individuals/042.png" />
+			<img class="pin12" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h2 class="rotateleft">golderfash</h2>
+			<h3 class="rotateright2">I wish that you don't die and relive it like HAppy death day</h3>
+			<img class="peepee13" src="Images/Individuals/043.png" />
+			<img class="pin13" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h2 class="rotateright2">epicninjask123</h2>
+			<h3 class="rotateleft">Hey CS, it's Epic Ninjask-- Uh, wait, actually, it's Epic NinjAAAAAAAAAAAAAA-- hehehe, I had to do it! Anyway, damned if I know what to say or how sentimental I should say it, so... Merry Christmas dude. [And yes, before you ask, I know this is for your anniversary, not Christmas <img src="Images/face-with-stuck-out-tongue_1f61b.png" style="width:25px;" />] Regardless though, I've been wanting to let you know how much your streams have cheered me up when I have busy weeks here at college. You know back when I first started watching you two January's ago, I'd actually just begun my toughest semester then, well, still today my toughest, and I'd be spending dozens of hours just on one project that I wasn't even sure if I was progressing on it or not. But then, you know and now of course, I've been coming back to your streams just because it's a really great time to laugh, unwind, and lighten up. Seriously, there is no way I could be half the entertainer you are. But the way I see it, any birthday wish I could give you right now would just be kinda selfish from how much you've helped me so... <br /><br />So, thanks CS. Stay CSexy, my friend!</h3>
+			<img alt="I said something." class="peepee14" src="Images/Individuals/044.png" onmouseover="document.getElementById('play044').play()" />
+			<audio id="play044" preload="auto">
+				<source src="Audio/044.mp3" />
+			</audio>
+			<img class="pin14" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h3 class="rotateright">Happy Birthday, CS! You are awesome! <img src="Images/grinning-face_1f600.png" style="width:25px;" /></h3>
+            <h2 class="rotateleft2">Fuzy2K</h2>
+			<img class="peepee15" src="Images/Individuals/045.png" />
+			<img class="pin15" src="Images/Pins/3Sub.png" />
+        </div>
+    </div>
+	<div class="section">
+		<div class="slide headpage"><img src="Images/415.png" /></div>
+		<div class="slide fillel">
+        <div class="tile1"></div>
+			<h2 class="rotateleft">duke</h2>
+			<h3 class="rotateright2">Have a happy  Birthday CS!</h3>
+			<img class="peepee01" src="Images/Individuals/046.png" />
+			<img class="pin01" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h2 class="rotateright2">1402News</h2>
+			<h3 class="rotateleft">30. Today you've turned 30 years old and I bet you've had one hell of a life. You graduated high school [I have no idea if you did. I'm just guessing.], you had a girlfriend, you reached a rank of popularity you probably never thought of reaching, and, most importantly, you have friends and family who care about you.<br /><br />Here's to another 3 decades.</h3>
+			<img alt="I said something." class="peepee02" src="Images/Individuals/047.png" onmouseover="document.getElementById('play047').play()" />
+			<audio id="play047" preload="auto">
+				<source src="Audio/047.mp3" />
+			</audio>
+			<img class="pin02" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h3 class="rotateright">There are very few people in the Mixer fellowship I truly admire.  You are among the top.  You deserve every piece of admiration from all of your streaming family and I wish you the best in all of your creative endeavors.  Thanks for putting a smile on my face.</h3>
+            <h2 class="rotateleft2">BabyJeezus</h2>
+			<img alt="I said something." class="peepee03" src="Images/Individuals/048.png" onmouseover="document.getElementById('play048').play()" />
+			<img src="Images/SexyBabbyJ.png" style="top:10%; left: 20%; width:250px; -ms-transform: rotate(-2.5deg); -webkit-transform: rotate(-2.5deg); transform: rotate(-2.5deg); box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5); z-index:1; position: absolute;"/>
+			<audio id="play048" preload="auto">
+				<source src="Audio/048.mp3" />
+			</audio>
+			<img class="pin03" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h3 class="rotateleft2">Hi cs.  I'm not great with words, but I hope you have a great blirthday.  Of all the cs188s I know, you're definitely in the top ten.  Have a greEeEeEeEeEeEeat day. Did I do that right?<br /><br />Warmest regards,<br />Peenial Trainington III, registered crotch doctor</h3>
+			<h2 class="rotateright">PeenTrain</h2>
+			<img alt="I said something." class="peepee04" src="Images/Individuals/049.png" onmouseover="document.getElementById('play049').play()" />
+			<audio id="play049" preload="auto">
+				<source src="Audio/049.mp3" />
+			</audio>
+			<img class="pin04" src="Images/Pins/3Sub.png" />
+			
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h2 class="rotateleft">LTesta</h2>
+			<h3 class="rotateright2">Hope you have an amazing birthday!!!</h3>
+			<img class="peepee05" src="Images/Individuals/050.png" />
+			<img class="pin05" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile6"></div>
+			<h2 class="rotateright2">LoopholesAgain</h2>
+			<h3 class="rotateleft">Here's to another year of CStreams, Mixer dreams, and most importantly Quaker Fruit & Creams!™</h3>
+			<img alt="I said something." class="peepee06" src="Images/Individuals/051.png" onmouseover="document.getElementById('play051').play()" />
+			<audio id="play051" preload="auto">
+				<source src="Audio/051.mp3" />
+			</audio>
+			<img class="pin06" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile7"></div>
+			<h3 class="rotateright">Happy Birthday CS! Thanks for all the memes and streams throughout the years. Keep doing what you do!</h3>
+            <h2 class="rotateleft2">evillecaston</h2>
+			<img alt="I said something." class="peepee07" src="Images/Individuals/052.png" onmouseover="document.getElementById('play052').play()" />
+			<audio id="play052" preload="auto">
+				<source src="Audio/052.mp3" />
+			</audio>
+			<img class="pin07" src="Images/Pins/5LS.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile8"></div>
+			<h3 class="rotateleft2">Have a good birthday and do things I wouldn't... Uh wait, other way around...</h3>
+            <h2 class="rotateright">Annorexorcist</h2>
+			<img class="peepee08" src="Images/Individuals/053.png" />
+			<img class="pin08" src="Images/Pins/6StF.png" />
+		</div>
+		<div class="slide fillel">
+        <div class="tile9"></div>
+			<h2 class="rotateleft">SulphurPotato</h2>
+			<h3 class="rotateright2">Happy birthday!</h3>
+			<img class="peepee09" src="Images/Individuals/054.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile10"></div>
+			<h2 class="rotateright2">Flapjack984</h2>
+			<h3 class="rotateleft">Happy birthday man!</h3>
+			<img class="peepee10" src="Images/Individuals/055.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile1"></div>
+			<h3 class="rotateright">I wish you the merriest of times.</h3>
+            <h2 class="rotateleft2">Mlboost</h2>
+			<img class="peepee11" src="Images/Individuals/056.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h3 class="rotateleft2">I left, but seems like your community is still growing strong. Good luck in the future, and have a happy birthday.</h3>
+			<h2 class="rotateright">Shanepro</h2>
+			<img class="peepee12" src="Images/Individuals/057.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h2 class="rotateleft">JaxHammerRox/Corkscrew</h2>
+			<h3 class="rotateright2">Happy birthday cs! I hope everything goes well and all your wishes are granted. Thank you for the happynes and great times on your streams.</h3>
+			<img alt="I said something." class="peepee13" src="Images/Individuals/058.png" onmouseover="document.getElementById('play058').play()" />
+			<audio id="play058" preload="auto">
+				<source src="Audio/058.mp3" />
+			</audio>
+			<img class="pin13" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h2 class="rotateright2">Rackera</h2>
+			<h3 class="rotateleft">Happy birthday cs! I hope that you have a great birthday. After all you help me smile! I would love to see you become a greater and amazinger streamer.<img src="Images/grinning-face_1f600.png" style="width:25px;" /></h3>
+			<img class="peepee14" src="Images/Individuals/059.png" />
+			<img class="pin14" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h3 class="rotateright">Hey, CS! I hope you have an amazing birthday and I hope you know how awesome you are too.<br /><br />I'm sorry that I can't always be there for every stream, but I hope you know how much me and everyone else enjoy them.<br />Keep up the good work and don't let anything get you down. We love ya, CS! <img src="Images/slightly-smiling-face_1f642.png" style="width:25px;" /></h3>
+            <h2 class="rotateleft2">MadameGhostie</h2>
+			<img alt="I said something." class="peepee15" src="Images/Individuals/060.png" onmouseover="document.getElementById('play060').play()" />
+			<audio id="play060" preload="auto">
+				<source src="Audio/060.mp3" />
+			</audio>
+			<img class="pin15" src="Images/Pins/4Mod.png" />
+        </div>
+    </div>
+	<div class="section">
+		<div class="slide headpage"><img src="Images/515.png" /></div>
+		<div class="slide fillel">
+        <div class="tile1"></div>
+			<h2 class="rotateleft">Arceus3251</h2>
+			<h3 class="rotateright2">Hey guys! ArCS here. [Just kidding, it's Arceus.]<br /><br />Hey, CS! Happy birthday. Congrats on becoming a wizard. Learn some spells &amp; shit for me.</h3>
+			<img alt="I said something." class="peepee01" src="Images/Individuals/061.png" onmouseover="document.getElementById('play061').play()" />
+			<audio id="play061" preload="auto">
+				<source src="Audio/061.mp3" />
+			</audio>
+			<img class="pin01" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h2 class="rotateright2">Professor Renderer</h2>
+			<h3 class="rotateleft">Hi, Renderer Mays here! ...cs188, what the actual fuck? When did you have a birthday? I'm gonna stick my super strong tire up your cAssHair so hard that you will scream "OH, HORRIBLE!" ...But, your butthole is too tight, which makes it hard to fuck. You shitting me? Anyway, what if we could go beyond the screen? This...is the world with your birthday. Your birthday enables us to do amazing things. So, happy birthday cs! Let this new walk of life become another great 365 days of CrAaAaAaAazy streaming, games, and most importantly, YTPs! You get all of this, a huge value for just $9001! Order right now!</h3>
+			<img alt="I said something." class="peepee02" src="Images/Individuals/062.png" onmouseover="document.getElementById('play062').play()" />
+			<audio id="play062" preload="auto">
+				<source src="Audio/062.mp3" />
+			</audio>
+			<img class="pin02" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h3 class="rotateright">CS, you're an amazing content creator and a supportive community member - we are so glad to have gotten to you know and your YTPs [every time we have a song request open <img src="Images/face-with-stuck-out-tongue_1f61b.png" style="width:25px;" />] and we hope that you have an amazing birthday! Also, enjoy the cake we made for you - hope you like chocolate! We worked very hard on it - 5 minutes to be exact!</h3>
+            <h2 class="rotateleft2">GoldilocksandTheBear</h2>
+			<img src="Images/CakeByGoldi.png" style="top:10%; left: 22.25%; width:400px; z-index: 25; position: absolute;"/>
+			<img alt="I said something." class="peepee03" src="Images/Individuals/063.png" onmouseover="document.getElementById('play063').play()" />
+			<audio id="play063" preload="auto">
+				<source src="Audio/063.mp3" />
+			</audio>
+			<img class="pin03" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h3 class="rotateleft2">Have yaself a good one CS.</h3>
+			<h2 class="rotateright">Heavymetalcat1</h2>
+			<img src="Images/LossMeme.png" style="top:10%; left: 26.5%; width:250px; -ms-transform: rotate(-2.5deg); -webkit-transform: rotate(-2.5deg); transform: rotate(-2.5deg); box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5); z-index:1; position: absolute;"/>
+			<img class="peepee04" src="Images/Individuals/064.png" />
+			<img class="pin04" src="Images/Pins/1Reg.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile5"></div>
+			<h2 class="rotateleft">Dubstep4Dayz</h2>
+			<h3 class="rotateright2">Haby birt doi cs!!! I know we haven't talked much over the past year, but that doesn't mean you haven't inspired me over it! Hope there's no F**king foot in your cake!</h3>
+			<img class="peepee05" src="Images/Individuals/065.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile6"></div>
+			<h2 class="rotateright2">hohsisescapee</h2>
+			<h3 class="rotateleft">100% satisfied</h3>
+			<img class="peepee06" src="Images/Individuals/066.png" />
+			<img class="pin06" src="Images/Pins/2Pro.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile7"></div>
+			<h3 class="rotateright">Happy birthday to the man who inspired thousands of sphincters to make poop. Hope you have "THE BEST!!!" [as Dave Grohl would say] birthday.</h3>
+            <h2 class="rotateleft2">Airshots22</h2>
+			<img class="peepee07" src="Images/Individuals/067.png" />
+			<img class="pin07" src="Images/Pins/3Sub.png" />
+        </div>
+        <div class="slide fillel">
+        <div style="background-image:url(Images/BackGrounds/f6e1a5c7156e6f404669ca151e8c2497.jpg); background-repeat:repeat; width:500px; height:500px; -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); transform: rotate(45deg); z-index:5; position:absolute; margin:auto; box-shadow: 0px 0px 20px rgba(128,128,128,0.75); top:25%; right: 46%;"></div>
+			<img src="Images/DrawingBySeven.jpg" style="top:10%; right: 46%; width:500px; -ms-transform: rotate(-2.5deg); -webkit-transform: rotate(-2.5deg); transform: rotate(-2.5deg); box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5); z-index:5; display: inline; position: absolute;" />
+            <h2 style="-ms-transform: rotate(5deg); -webkit-transform: rotate(5deg); transform: rotate(5deg); position:absolute; z-index:5; right: 45%; bottom:15%; width: 1000px;">Seven-of-7</h2>
+			<img class="peepee08" src="Images/Individuals/068.png" />
+			<img class="pin08" src="Images/Pins/6StF.png" />
+		</div>
+		<div class="slide fillel">
+        <div class="tile9"></div>
+			<h2 class="rotateleft">TWEEnkie</h2>
+			<h3 class="rotateright2">Hiya CS, have a great birthday. Well deserved for a great streamer like you. <img src="Images/grinning-face_1f600.png" style="width:25px;" /></h3>
+			<img class="peepee09" src="Images/Individuals/069.png" />
+			<img class="pin09" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile10"></div>
+			<h2 class="rotateright2">Ika_BakaKu</h2>
+			<h3 class="rotateleft">Grats on being shat out a vagina DAY! I hope you have a great day... GREAT day, full of whale-cumming messages & fun fun times!</h3>
+			<img alt="I said something." class="peepee10" src="Images/Individuals/070.png" onmouseover="document.getElementById('play070').play()" />
+			<audio id="play070" preload="auto">
+				<source src="Audio/070.mp3" />
+			</audio>
+			<img class="pin10" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile1"></div>
+			<h3 class="rotateright">CS! TheeSlushee is in the Birthday card! Have an epic birthday! You're one of my favorite streamers on Mixer, hope you have a fantabulous day!</h3>
+            <h2 class="rotateleft2">TheeSlushee</h2>
+			<img alt="I said something." class="peepee11" src="Images/Individuals/071.png" onmouseover="document.getElementById('play071').play()" />
+			<audio id="play071" preload="auto">
+				<source src="Audio/071.mp3" />
+			</audio>
+			<img class="pin11" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile2"></div>
+			<h3 class="rotateleft2">Luisa and I wish you a Super Strong Happy 30th Birthday!</h3>
+			<h2 class="rotateright">SPACECAPT</h2>
+			<img class="peepee12" src="Images/Individuals/072.png" />
+			<img class="pin12" src="Images/Pins/4Mod.png" />
+        </div>
+        <div class="slide fillel">
+        <div class="tile3"></div>
+			<h2 class="rotateleft">Sprybug</h2>
+			<h3 class="rotateright2">It's been fun playing along with you and the community in the streams.  Hope all goes well for you in 2018 and beyond.</h3>
+			<img class="peepee13" src="Images/Individuals/073.png" />
+			<img class="pin13" src="Images/Pins/4Mod.png" />
+			<img src="Images/DrawingBySprybug.png" style="top:10%; right: 16%; width:500px; -ms-transform: rotate(2.5deg); -webkit-transform: rotate(2.5deg); transform: rotate(2.5deg); box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5); z-index:5; position: absolute;"/>
+        </div>
+        <div class="slide fillel">
+        <div class="tile4"></div>
+			<h2 class="rotateright2">Larc</h2>
+			<h3 class="rotateleft">Happy birthday dude! You may not be a dog, but you still a good good boy.</h3>
+			<img alt="I said something." class="peepee14" src="Images/Individuals/074.png" onmouseover="document.getElementById('play074beta').play()" />
+			<video id="play074beta" class="achievements" preload="auto" style="right: 8.375%;" >
+				<source src="Images/Achievements/Beta.webm" type="video/webm" />
+			</video>
+			<img class="pin14" src="Images/Pins/6StF.png" />
+        </div>
+        <div class="slide fillel">
+		<div style="background-image:url(Images/BackGrounds/5.png); background-repeat:repeat; width:500px; height:500px; -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); transform: rotate(45deg); z-index:5; position:absolute; margin:auto; box-shadow: 0px 0px 20px rgba(128,128,128,0.75); top:25%; right: 2.25%;"></div>
+			<img src="Images/DrawingByKausi.jpg" style="top:20%; right: 2.125%; width:600px; -ms-transform: rotate(-2.5deg); -webkit-transform: rotate(-2.5deg); transform: rotate(-2.5deg); box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5); z-index:5; display: inline; position: absolute;" />
+            <h2 style="-ms-transform: rotate(5deg); -webkit-transform: rotate(5deg); transform: rotate(5deg); position:absolute; z-index:5; right: 1.5%; bottom:15%; width: 1000px;">KausiBomb</h2>
+			<img class="peepee15" src="Images/Individuals/075.png" onmouseover="document.getElementById('playchroma').play()"  />
+			<img class="pin15" src="Images/Pins/6StF.png" />
+			<video id="playchroma" preload="auto" class="achievements" style="right: 2.2%;" >
+				<source src="Images/Achievements/Chroma.webm" type="video/webm" />
+			</video>
+        </div>
+    </div>
+	<div class="section cover">
+		<video class="ending">
+			<source src="Videos/Ending.mp4" type="video/mp4">
+		</video>
+	</div>
+</div>
+</div>
+</body>
+</html>
